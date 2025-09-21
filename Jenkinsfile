@@ -7,10 +7,6 @@ pipeline {
     string(name: 'CI_JOB', defaultValue: 'node-ci', description: 'CI job name to fetch artifact from (used when DEPLOY=true)')
   }
 
-  tools {
-    nodejs 'NodeJS 20'   // Jenkins > Manage Jenkins > Global Tool Configuration
-  }
-
   environment {
     // Azure targets (adjust only if your names differ)
     AZURE_RESOURCE_GROUP = 'Project-5'
